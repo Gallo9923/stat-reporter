@@ -12,6 +12,8 @@ namespace stats_reporter
     {
         private DataTable dt;
 
+        private HashSet<string> deptType;
+
         public Report()
         {
 
