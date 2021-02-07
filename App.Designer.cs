@@ -82,18 +82,12 @@ namespace stats_reporter
             this.chart.Legends.Add(legend2);
             this.chart.Location = new System.Drawing.Point(557, 68);
             this.chart.Name = "chart";
-<<<<<<< HEAD
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart.Series.Add(series1);
-=======
+
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart.Series.Add(series2);
->>>>>>> afe1c759dbf0561d6a51f7293258cb6273063e77
+
             this.chart.Size = new System.Drawing.Size(455, 474);
             this.chart.TabIndex = 5;
             this.chart.Text = "chart1";
