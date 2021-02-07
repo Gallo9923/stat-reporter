@@ -13,9 +13,16 @@ namespace stats_reporter
 {
     public partial class App : Form
     {
+        private HashSet<string> villages;
+        private DataTable dt;
+        private int villagesId;
+        private readonly string villageColName = "nombre departamento";
+
         public App()
         {
             InitializeComponent();
+            this.villages = new HashSet<string>();
+            this.dt = new DataTable();
         }
 
         private void App_Load(object sender, EventArgs e)
@@ -27,10 +34,12 @@ namespace stats_reporter
             if(openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
-                lblOpen.Text = "File read from: " + filePath;
-                DataTable dt = ReadData(filePath);
+                dt = ReadData(filePath);
+                comboBox.DataSource = villages.ToList();
                 dataGrid.DataSource = dt;
-            } else
+                lblOpen.Text = "File succesfully loaded from: '" + filePath + "'";
+            }
+            else
             {
                 lblOpen.Text = "No file opened";
             }
@@ -41,12 +50,17 @@ namespace stats_reporter
             string[] lines = File.ReadAllLines(filePath);
             string[] headers = lines[0].Split(new char[] { ',' });
             int numCols = headers.GetLength(0);
-            DataTable dt = new DataTable();
+            this.dt = new DataTable();
             string[] Fields;
 
             //1st row must be column names; force lower case to ensure matching later on.
-            for (int i = 0; i < numCols; i++)
-                dt.Columns.Add(headers[i].ToLower(), typeof(string));
+            for (int i = 0; i < numCols; i++) 
+            {
+                string colName = headers[i].ToLower(); 
+                if(colName == villageColName) villagesId = i;
+                dt.Columns.Add(colName, typeof(string));
+            }
+
             DataRow Row;
             for (int i = 1; i < lines.GetLength(0); i++)
             {
@@ -54,8 +68,11 @@ namespace stats_reporter
                 if(Fields.GetLength(0) == numCols)
                 {
                     Row = dt.NewRow();
-                    for (int f = 0; f < numCols; f++)
+                    for (int f = 0; f < numCols; f++) {
                         Row[f] = Fields[f];
+                        if (f == villagesId)
+                            villages.Add(Fields[f]);
+                    }
                     dt.Rows.Add(Row);
                 }
             }
@@ -64,6 +81,7 @@ namespace stats_reporter
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
         }
     }
 }
