@@ -36,10 +36,10 @@ namespace stats_reporter
             this.BtnOpen = new System.Windows.Forms.Button();
             this.lblOpen = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -74,21 +74,21 @@ namespace stats_reporter
             this.dataGrid.Size = new System.Drawing.Size(539, 474);
             this.dataGrid.TabIndex = 4;
             // 
-            // chart1
+            // chart
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(557, 68);
-            this.chart1.Name = "chart1";
+            this.chart.Legends.Add(legend1);
+            this.chart.Location = new System.Drawing.Point(557, 68);
+            this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(455, 474);
-            this.chart1.TabIndex = 5;
-            this.chart1.Text = "chart1";
+            this.chart.Series.Add(series1);
+            this.chart.Size = new System.Drawing.Size(455, 474);
+            this.chart.TabIndex = 5;
+            this.chart.Text = "chart1";
             // 
             // comboBox
             // 
@@ -105,7 +105,7 @@ namespace stats_reporter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 554);
             this.Controls.Add(this.comboBox);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.lblOpen);
             this.Controls.Add(this.BtnOpen);
@@ -114,7 +114,7 @@ namespace stats_reporter
             this.Text = "Stats reporter";
             this.Load += new System.EventHandler(this.App_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +126,7 @@ namespace stats_reporter
         private System.Windows.Forms.Button BtnOpen;
         private System.Windows.Forms.Label lblOpen;
         private System.Windows.Forms.DataGridView dataGrid;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private System.Windows.Forms.ComboBox comboBox;
     }
 }

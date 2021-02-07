@@ -22,7 +22,6 @@ namespace stats_reporter
         {
 
         }
-
         private void BtnOpen_Click(object sender, EventArgs e)
         {
             if(openFileDialog.ShowDialog() == DialogResult.OK)
@@ -65,7 +64,6 @@ namespace stats_reporter
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
