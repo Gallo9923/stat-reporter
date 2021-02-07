@@ -37,7 +37,9 @@ namespace stats_reporter
             this.lblOpen = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.CBoxField = new System.Windows.Forms.ComboBox();
+            this.CBoxUniqueVals = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
@@ -82,33 +84,54 @@ namespace stats_reporter
             this.chart.Legends.Add(legend2);
             this.chart.Location = new System.Drawing.Point(557, 68);
             this.chart.Name = "chart";
-
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart.Series.Add(series2);
-
             this.chart.Size = new System.Drawing.Size(455, 474);
             this.chart.TabIndex = 5;
             this.chart.Text = "chart1";
             this.chart.Click += new System.EventHandler(this.chart_Click);
             // 
-            // comboBox
+            // CBoxField
             // 
-            this.comboBox.AccessibleName = "";
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(12, 41);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(121, 21);
-            this.comboBox.TabIndex = 6;
-            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.CBoxField.AccessibleName = "";
+            this.CBoxField.FormattingEnabled = true;
+            this.CBoxField.Location = new System.Drawing.Point(96, 41);
+            this.CBoxField.Name = "CBoxField";
+            this.CBoxField.Size = new System.Drawing.Size(121, 21);
+            this.CBoxField.TabIndex = 6;
+            this.CBoxField.Text = "Field";
+            this.CBoxField.SelectedIndexChanged += new System.EventHandler(this.CBoxField_SelectedIndexChanged);
+            // 
+            // CBoxUniqueVals
+            // 
+            this.CBoxUniqueVals.AccessibleName = "";
+            this.CBoxUniqueVals.FormattingEnabled = true;
+            this.CBoxUniqueVals.Location = new System.Drawing.Point(248, 41);
+            this.CBoxUniqueVals.Name = "CBoxUniqueVals";
+            this.CBoxUniqueVals.Size = new System.Drawing.Size(121, 21);
+            this.CBoxUniqueVals.TabIndex = 7;
+            this.CBoxUniqueVals.Text = "Unique values";
+            this.CBoxUniqueVals.SelectedIndexChanged += new System.EventHandler(this.CBoxUniqueVals_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Filter by:";
             // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 554);
-            this.Controls.Add(this.comboBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CBoxUniqueVals);
+            this.Controls.Add(this.CBoxField);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.lblOpen);
@@ -131,7 +154,9 @@ namespace stats_reporter
         private System.Windows.Forms.Label lblOpen;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
-        private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.ComboBox CBoxField;
+        private System.Windows.Forms.ComboBox CBoxUniqueVals;
+        private System.Windows.Forms.Label label1;
     }
 }
 

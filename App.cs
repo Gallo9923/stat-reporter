@@ -14,27 +14,20 @@ namespace stats_reporter
     public partial class App : Form
     {
         private Report report;
-
-        private HashSet<string> villages;
         private DataTable dt;
-        private int villagesId;
-        private readonly string villageColName = "nombre departamento";
-
 
         public App()
         {
             InitializeComponent();
             report = new Report();
-
-            this.villages = new HashSet<string>();
             this.dt = new DataTable();
-
         }
 
         private void App_Load(object sender, EventArgs e)
         {
 
         }
+
         private void BtnOpen_Click(object sender, EventArgs e)
         {
 
@@ -42,8 +35,8 @@ namespace stats_reporter
             {
                 string filePath = openFileDialog.FileName;
                 report.ReadData(filePath);
-                dt = report.getDataTable();
-                comboBox.DataSource = villages.ToList();
+                this.dt = report.getDataTable();
+                loadFields();
                 dataGrid.DataSource = dt;
                 lblOpen.Text = "File succesfully loaded from: '" + filePath + "'";
             }
@@ -53,14 +46,27 @@ namespace stats_reporter
             }
         }
 
+        public void loadFields()
+        {
+            List<string> fields = new List<string>();
+            foreach(DataColumn col in dt.Columns)
+                fields.Add( col.ToString() );
 
-        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
+            CBoxField.DataSource = fields;
+        }
+
+        private void CBoxField_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedField = (string)CBoxField.SelectedItem;
+            CBoxUniqueVals.DataSource = report.getCols2Unique()[selectedField].ToList();
+        }
+        
+        private void chart_Click(object sender, EventArgs e)
         {
 
         }
-        
 
-        private void chart_Click(object sender, EventArgs e)
+        private void CBoxUniqueVals_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
