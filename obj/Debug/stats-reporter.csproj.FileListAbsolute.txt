@@ -1,0 +1,9 @@
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\bin\Debug\stats-reporter.exe.config
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\bin\Debug\stats-reporter.exe
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\bin\Debug\stats-reporter.pdb
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\obj\Debug\stats-reporter.csprojAssemblyReference.cache
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\obj\Debug\stats_reporter.Properties.Resources.resources
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\obj\Debug\stats-reporter.csproj.GenerateResource.cache
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\obj\Debug\stats-reporter.csproj.CoreCompileInputs.cache
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\obj\Debug\stats-reporter.exe
+H:\Universidad\4\integrador\stats-reporter\stats-reporter\obj\Debug\stats-reporter.pdb
