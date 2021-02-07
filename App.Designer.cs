@@ -40,6 +40,8 @@ namespace stats_reporter
             this.CBoxField = new System.Windows.Forms.ComboBox();
             this.CBoxUniqueVals = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnReset = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
@@ -64,16 +66,17 @@ namespace stats_reporter
             this.lblOpen.AutoSize = true;
             this.lblOpen.Location = new System.Drawing.Point(93, 17);
             this.lblOpen.Name = "lblOpen";
-            this.lblOpen.Size = new System.Drawing.Size(55, 13);
+            this.lblOpen.Size = new System.Drawing.Size(89, 13);
             this.lblOpen.TabIndex = 3;
-            this.lblOpen.Text = "Load data";
+            this.lblOpen.Text = "Click to load data";
+            this.lblOpen.Click += new System.EventHandler(this.lblOpen_Click);
             // 
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(12, 68);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(539, 474);
+            this.dataGrid.Size = new System.Drawing.Size(546, 507);
             this.dataGrid.TabIndex = 4;
             // 
             // chart
@@ -82,13 +85,14 @@ namespace stats_reporter
             this.chart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart.Legends.Add(legend2);
-            this.chart.Location = new System.Drawing.Point(557, 68);
+            this.chart.Location = new System.Drawing.Point(571, 68);
             this.chart.Name = "chart";
             series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Cantidad";
             this.chart.Series.Add(series2);
-            this.chart.Size = new System.Drawing.Size(455, 474);
+            this.chart.Size = new System.Drawing.Size(469, 507);
             this.chart.TabIndex = 5;
             this.chart.Text = "chart1";
             this.chart.Click += new System.EventHandler(this.chart_Click);
@@ -124,11 +128,32 @@ namespace stats_reporter
             this.label1.TabIndex = 8;
             this.label1.Text = "Filter by:";
             // 
+            // BtnReset
+            // 
+            this.BtnReset.Location = new System.Drawing.Point(396, 39);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(75, 23);
+            this.BtnReset.TabIndex = 9;
+            this.BtnReset.Text = "Reset";
+            this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(503, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "STATS REPORTER";
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 554);
+            this.ClientSize = new System.Drawing.Size(1052, 587);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CBoxUniqueVals);
             this.Controls.Add(this.CBoxField);
@@ -157,6 +182,8 @@ namespace stats_reporter
         private System.Windows.Forms.ComboBox CBoxField;
         private System.Windows.Forms.ComboBox CBoxUniqueVals;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.Label label2;
     }
 }
 
