@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.IO;
 
@@ -12,7 +8,6 @@ namespace stats_reporter
     {
         private DataTable dataTable;
         private Dictionary<string, HashSet<string>> cols2UniqueVals;
-        private HashSet<string> deptType;
 
         public Report()
         {
