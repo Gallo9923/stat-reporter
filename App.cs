@@ -65,5 +65,10 @@ namespace stats_reporter
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void chart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

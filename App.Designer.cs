@@ -83,12 +83,14 @@ namespace stats_reporter
             this.chart.Location = new System.Drawing.Point(557, 68);
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart.Series.Add(series1);
             this.chart.Size = new System.Drawing.Size(455, 474);
             this.chart.TabIndex = 5;
             this.chart.Text = "chart1";
+            this.chart.Click += new System.EventHandler(this.chart_Click);
             // 
             // comboBox
             // 
