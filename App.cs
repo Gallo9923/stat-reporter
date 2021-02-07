@@ -13,9 +13,13 @@ namespace stats_reporter
 {
     public partial class App : Form
     {
+
+        private Report report;
+        
         public App()
         {
             InitializeComponent();
+            report = new Report();
         }
 
         private void App_Load(object sender, EventArgs e)
@@ -28,39 +32,14 @@ namespace stats_reporter
             {
                 string filePath = openFileDialog.FileName;
                 lblOpen.Text = "File read from: " + filePath;
-                DataTable dt = ReadData(filePath);
-                dataGrid.DataSource = dt;
+                report.ReadData(filePath);
+                dataGrid.DataSource = report.getDataTable();
             } else
             {
                 lblOpen.Text = "No file opened";
             }
         }
 
-        public DataTable ReadData(string filePath)
-        {
-            string[] lines = File.ReadAllLines(filePath);
-            string[] headers = lines[0].Split(new char[] { ',' });
-            int numCols = headers.GetLength(0);
-            DataTable dt = new DataTable();
-            string[] Fields;
-
-            //1st row must be column names; force lower case to ensure matching later on.
-            for (int i = 0; i < numCols; i++)
-                dt.Columns.Add(headers[i].ToLower(), typeof(string));
-            DataRow Row;
-            for (int i = 1; i < lines.GetLength(0); i++)
-            {
-                Fields = lines[i].Split(new char[] { ',' });
-                if(Fields.GetLength(0) == numCols)
-                {
-                    Row = dt.NewRow();
-                    for (int f = 0; f < numCols; f++)
-                        Row[f] = Fields[f];
-                    dt.Rows.Add(Row);
-                }
-            }
-            return dt;
-        }
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {

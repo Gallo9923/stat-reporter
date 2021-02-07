@@ -17,3 +17,13 @@ H:\Universidad\4\integrador\S1\stats-reporter\obj\Debug\stats-reporter.csproj.Co
 H:\Universidad\4\integrador\S1\stats-reporter\obj\Debug\stats-reporter.exe
 H:\Universidad\4\integrador\S1\stats-reporter\obj\Debug\stats-reporter.pdb
 H:\Universidad\4\integrador\S1\stats-reporter\obj\Debug\stats_reporter.App.resources
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\bin\Debug\stats-reporter.exe.config
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\bin\Debug\stats-reporter.exe
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\bin\Debug\stats-reporter.pdb
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats-reporter.csprojAssemblyReference.cache
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats_reporter.App.resources
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats_reporter.Properties.Resources.resources
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats-reporter.csproj.GenerateResource.cache
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats-reporter.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats-reporter.exe
+C:\Users\Chris\Google Drive\____Decimo Semestre\Proyecto Integrador 1\Taller 1\stat-reporter\obj\Debug\stats-reporter.pdb
