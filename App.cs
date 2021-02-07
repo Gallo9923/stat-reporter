@@ -46,6 +46,8 @@ namespace stats_reporter
                 comboBox.DataSource = villages.ToList();
                 dataGrid.DataSource = dt;
                 lblOpen.Text = "File succesfully loaded from: '" + filePath + "'";
+
+                barChart();
             }
             else
             {
@@ -85,18 +87,22 @@ namespace stats_reporter
                     types.Add(curr, 1);
                 }
             }
-                
-            foreach(KeyValuePair<string, int> entry in types)
+
+            
+
+            
+            foreach (KeyValuePair<string, int> entry in types)
             {
                 Console.WriteLine(entry.Key + " " + entry.Value);
+                //chart.Series.AddXY(entry.Key, entry.Value);
+                chart.Series["Cantidad"].Points.AddXY(entry.Key, entry.Value);
+
             }
+
             
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            barChart();
-        }
+  
     }
 }

@@ -38,7 +38,6 @@ namespace stats_reporter
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             this.SuspendLayout();
@@ -86,7 +85,7 @@ namespace stats_reporter
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Cantidad";
             this.chart.Series.Add(series2);
             this.chart.Size = new System.Drawing.Size(455, 474);
             this.chart.TabIndex = 5;
@@ -103,22 +102,11 @@ namespace stats_reporter
             this.comboBox.TabIndex = 6;
             this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(693, 41);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 554);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.dataGrid);
@@ -143,7 +131,6 @@ namespace stats_reporter
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private System.Windows.Forms.ComboBox comboBox;
-        private System.Windows.Forms.Button button1;
     }
 }
 
