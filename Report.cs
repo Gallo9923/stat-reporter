@@ -31,16 +31,15 @@ namespace stats_reporter
             for (int i = 0; i < numCols; i++)
                 dt.Columns.Add(headers[i].ToLower(), typeof(string));
             DataRow Row;
-            for (int i = 1; i < lines.GetLength(0); i++)
+            for (int i = 1; i < lines.GetLength(0)-5; i++)
             {
                 Fields = lines[i].Split(new char[] { ',' });
-                if (Fields.GetLength(0) == numCols)
-                {
-                    Row = dt.NewRow();
-                    for (int f = 0; f < numCols; f++)
-                        Row[f] = Fields[f];
-                    dt.Rows.Add(Row);
-                }
+                
+                Row = dt.NewRow();
+                for (int f = 0; f < numCols; f++)
+                    Row[f] = Fields[f];
+                dt.Rows.Add(Row);
+                
             }
 
         }
