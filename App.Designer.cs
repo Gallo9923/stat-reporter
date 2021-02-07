@@ -69,9 +69,9 @@ namespace stats_reporter
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(12, 353);
+            this.dataGrid.Location = new System.Drawing.Point(12, 68);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(972, 189);
+            this.dataGrid.Size = new System.Drawing.Size(539, 474);
             this.dataGrid.TabIndex = 4;
             // 
             // chart1
@@ -80,30 +80,30 @@ namespace stats_reporter
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 41);
+            this.chart1.Location = new System.Drawing.Point(557, 68);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(972, 300);
+            this.chart1.Size = new System.Drawing.Size(455, 474);
             this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             // 
             // comboBox
             // 
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(27, 320);
+            this.comboBox.Location = new System.Drawing.Point(12, 41);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(121, 21);
             this.comboBox.TabIndex = 6;
-            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 554);
+            this.ClientSize = new System.Drawing.Size(1024, 554);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGrid);
