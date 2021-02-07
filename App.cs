@@ -52,12 +52,20 @@ namespace stats_reporter
             for (int i = 1; i < lines.GetLength(0); i++)
             {
                 Fields = lines[i].Split(new char[] { ',' });
-                Row = dt.NewRow();
-                for (int f = 0; f < numCols; f++)
-                    Row[f] = Fields[f];
-                dt.Rows.Add(Row);
+                if(Fields.GetLength(0) == numCols)
+                {
+                    Row = dt.NewRow();
+                    for (int f = 0; f < numCols; f++)
+                        Row[f] = Fields[f];
+                    dt.Rows.Add(Row);
+                }
             }
             return dt;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
