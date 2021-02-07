@@ -32,6 +32,8 @@ namespace stats_reporter
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.BtnOpen = new System.Windows.Forms.Button();
             this.lblOpen = new System.Windows.Forms.Label();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -58,16 +60,27 @@ namespace stats_reporter
             this.lblOpen.TabIndex = 3;
             this.lblOpen.Text = "Load data";
             // 
+            // dataGrid
+            // 
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(12, 41);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.Size = new System.Drawing.Size(776, 360);
+            this.dataGrid.TabIndex = 4;
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.lblOpen);
             this.Controls.Add(this.BtnOpen);
             this.Name = "App";
-            this.Text = "s";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Stats reporter";
             this.Load += new System.EventHandler(this.App_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,6 +91,7 @@ namespace stats_reporter
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button BtnOpen;
         private System.Windows.Forms.Label lblOpen;
+        private System.Windows.Forms.DataGridView dataGrid;
     }
 }
 
